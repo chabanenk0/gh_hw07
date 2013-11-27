@@ -32,34 +32,6 @@ public function registerBundles()
     );
 }
 
-Register namespaces in app/autoload.php::
-<?php
-$loader->registerNamespaces(array(
-    // ...
-    'Goutte'           => __DIR__.'/../vendor/goutte/src',
-    'Sonata'           => __DIR__.'/../vendor/Sonnata/SonataGoutteBundle/',
-));
-
-Configuration
-
-edit app/autoload.php and AppKernel.php to add the appropriate lines for the Sonata namespace.
-edit your config.yml and add these lines
-sonata_goutte:
-    class: Sonata\GoutteBundle\Manager
-    clients:
-        default:
-            config:
-                adapter: Zend\Http\Client\Adapter\Socket
-
-        curl:
-            config:
-                maxredirects: 0
-                timeout: 30
-                useragent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US) Gecko/20100401 Firefox/3.6.3
-                adapter: Sonata\GoutteBundle\Adapter\Curl
-                verbose_log: %kernel.logs_dir%/curl.log
-                verbose: true
-
 3. Create database structure
 run the commands:
 app/console doctrine:database:create

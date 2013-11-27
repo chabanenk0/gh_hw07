@@ -17,22 +17,21 @@ class RssUpdaterService
 {
     protected $doctrine;
 
-    protected $crawler;
+    protected $goutte;
 
     protected $url;
 
-    public function __construct($doctrine)
+    public function __construct($doctrine,$goutte)
     {
         $this->doctrine = $doctrine;
-        //$this->crawler = crawler;
+        $this->goutte = $goutte;
         $this->url = 'http://localhost/rss/physics.xml';
     }
 
     public function updateRss()
     {
-        //$client = $this->get('goutte')
-        //    ->getNamedClient('curl');
-        $client = new Client();
+        $client = $this->goutte->getNamedClient('curl');
+        //$client = new Client();
         //$crawler = $client->request('GET', 'http://export.arxiv.org/rss/physics');
         $crawler = $client->request('GET', 'http://localhost/rss/physics.xml');
         $response = $client->getResponse();

@@ -21,7 +21,7 @@ class DefaultController extends Controller
         /*
         //$client = $this->get('goutte')
         //    ->getNamedClient('curl');
-        $client = new Client();
+        //$client = new Client();
         //$crawler = $client->request('GET', 'http://export.arxiv.org/rss/physics');
         $crawler = $client->request('GET', 'http://localhost/rss/physics.xml');
         $response = $client->getResponse();

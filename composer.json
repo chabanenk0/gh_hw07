@@ -6,6 +6,12 @@
     "autoload": {
         "psr-0": { "": "src/" }
     },
+    "repositories": [
+    {
+       "type": "vcs",
+       "url": "https://github.com/chabanenk0/SonataGoutteBundle"
+    }
+    ],
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.3.*",
@@ -19,8 +25,9 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
-        "symfony/dom-crawler": "2.5.*@dev",
-        "fabpot/goutte": "1.0.*@dev"
+        "fabpot/goutte": "1.0.*@dev",
+        "guzzle/http": "3.7.*@dev",
+        "sonata-project/goutte-bundle": "1.0.*@dev"
     },
     "scripts": {
         "post-install-cmd": [
