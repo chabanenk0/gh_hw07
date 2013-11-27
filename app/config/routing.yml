@@ -1,0 +1,5 @@
+chabanenk0_rss_update:
+    resource: "@chabanenk0RssUpdateBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
