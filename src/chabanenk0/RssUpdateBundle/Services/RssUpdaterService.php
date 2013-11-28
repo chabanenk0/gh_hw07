@@ -21,11 +21,11 @@ class RssUpdaterService
 
     protected $url;
 
-    public function __construct($doctrine,$goutte)
+    public function __construct($doctrine,$goutte,$url)
     {
         $this->doctrine = $doctrine;
         $this->goutte = $goutte;
-        $this->url = 'http://localhost/rss/physics.xml';
+        $this->url = $url;'http://localhost/rss/physics.xml';
     }
 
     public function updateRss()

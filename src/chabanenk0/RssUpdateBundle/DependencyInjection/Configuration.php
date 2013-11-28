@@ -19,7 +19,16 @@ class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('chabanenk0_rss_update');
-
+        $rootNode
+            ->children()
+                ->variableNode('url')
+                    ->defaultValue('http://localhost/rss/physics.xml')
+                    ->info('Url that gives rss feed')
+                    ->example('example setting')
+                ->end()
+            ->end()
+        ;
+        // node types http://api.symfony.com/2.4/Symfony/Component/Config/Definition/Builder/NodeBuilder.html
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for
         // more information on that topic.

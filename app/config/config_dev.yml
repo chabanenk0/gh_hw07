@@ -45,3 +45,6 @@ sonata_goutte:
                 adapter: Sonata\GoutteBundle\Adapter\Curl
                 verbose_log: %kernel.logs_dir%/curl.log
                 verbose: true
+
+chabanenk0_rss_update:
+    url: "http://localhost/rss/physics.xml"
